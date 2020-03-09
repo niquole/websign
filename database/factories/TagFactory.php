@@ -2,10 +2,11 @@
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
-use App\Model;
+use App\Tag;
 use Faker\Generator as Faker;
+use Illuminate\Database\Eloquent\Model;
 
-$factory->define(Model::class, function (Faker $faker) {
+$factory->define(Tag::class, function (Faker $faker) {
     return [
         'title' => $faker->word(),
     ];
