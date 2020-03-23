@@ -1,12 +1,21 @@
-<template>
-    <div>
+<template id="app">
+    <div class="container">
         <div v-for="post in posts">
-            <div class="card" style="width: 18rem;">
-                <!--<img src="..." class="card-img-top" alt="...">-->
-                <div class="card-body">
-                    <h5 class="card-title"> </h5>
-                    <p class="card-text"> {{ post.description }} </p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+            <div class="posts">
+                <div class="post">
+                    <div class="post_image-holder">
+                        <span class="like">Like</span>
+                        <img class="post_image" src="https://source.unsplash.com/300x225/?cat" alt="cat"/>
+                    </div>
+                    <div class="post-title">
+                        <h2>
+                            {{post.title}}
+                            <small>{{ post.description }}</small>
+                        </h2>
+                    </div>
+                    <div>
+                        <a href="#" class="btn">visit {{post.user.name}} </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -15,15 +24,21 @@
 
 <script>
     export default {
-        data(){
-          return {
-              posts: []
-          }
+        data() {
+            return {
+                posts: []
+            }
         },
         mounted() {
-            axios.get('/api/posts').then((response)=> {
+            axios.get('/api/posts').then((response) => {
                 this.posts = response.data
             })
-        }
+        },
+        methods: {}
     }
+
 </script>
+
+<style lang="scss">
+
+</style>

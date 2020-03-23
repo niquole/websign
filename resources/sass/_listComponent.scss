@@ -1,0 +1,128 @@
+ // font stuff
+    @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,300,600,700,900);
+
+
+    // colour stuff
+    $white: #ffffff;
+    $lightBG: #dce1df;
+    $salmon: #ff6666;
+
+    $teal: #0096a0;
+    $tealMid: #0ebac7;
+    $tealContrast: #33ffff;
+    $tealShade: #007c85;
+
+    $darkGrey: #4f585e;
+
+    a.visit_btn {
+        background: $teal;
+        border-radius: 5px;
+        /*box-shadow: 0 2px 0px 0 rgba(0, 0, 0, 0.25);*/
+        color: $white;
+        display: block;
+
+        /*padding: 6px 30px 8px;*/
+        /*position: relative;*/
+        text-decoration: none;
+        transition: all 0.1s 0s ease-out;
+    }
+
+
+    div.posts {
+        text-align: center;
+        position: relative;
+        display: block;
+        width: 500px;
+        height: 520px;
+        margin-bottom: 20px;
+    }
+
+    div.post {
+        position: absolute;
+        //text-align: left;
+        height: 400px;
+
+
+        img {
+            //padding-bottom: 20%;
+            width: 500px;
+            height: 400px;
+            opacity: 1;
+            display: block;
+            transition: .5s ease;
+        }
+
+        .post_image-holder {
+            background: rgba(0, 0, 0, 0.1);
+            height: 0;
+            padding-bottom: 75%;
+        }
+
+        div.post-title {
+            background: black;
+            padding: 6px 15px 10px;
+            position: relative;
+            z-index: 0;
+
+
+            span.like, a.toggle-info {
+                display: none;
+
+            }
+
+
+            h2 {
+                color: #0096a0;
+                font-size: 24px;
+                font-weight: 700;
+                letter-spacing: -0.05em;
+                margin: 0;
+                padding: 0;
+
+                small {
+                    display: block;
+                    font-size: 18px;
+                    font-weight: 600;
+                    letter-spacing: -0.025em;
+                    color: gray;
+                }
+            }
+        }
+
+        span.like {
+            display: none;
+        }
+
+        div.post_image-holder:hover {
+            cursor: pointer;
+
+            span.like {
+                font-family: "Arial";
+                opacity: 1;
+                font-weight: bolder;
+                color: #0096a0;
+                font-size: 50px;
+                display: block;
+                height: 2px;
+                transition: all 0.25s 0s ease-out;
+                width: 12px;
+            }
+        }
+
+        img:hover {
+            opacity: 0.3;
+        }
+
+        div.post-description {
+            padding: 0 15px 10px;
+            position: relative;
+            font-size: 14px;
+        }
+
+        div.post-actions {
+            box-shadow: 0 2px 0px 0 rgba(0, 0, 0, 0.075);
+            padding: 10px 15px 20px;
+            text-align: center;
+        }
+    }
+

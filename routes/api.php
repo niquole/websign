@@ -18,4 +18,4 @@ use Illuminate\Support\Facades\Route;
 //    return $request->user();
 //});
 
-Route::middleware('api')->get('posts', 'HomeController@index');
+Route::middleware('api')->get('posts', 'ApiPostsController@index');
