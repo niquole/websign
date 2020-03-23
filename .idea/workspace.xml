@@ -2,26 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bf22aa93-631e-462a-916e-9422204bcd9c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/js/components/HeaderComponent.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/websign.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/websign.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Post.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/PostFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/PostFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_03_08_144014_create_posts_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_03_08_144014_create_posts_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/ExampleComponent.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/HeaderComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/HeaderComponent.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/components/ListComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/ListComponent.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/_variables.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/_listComponent.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/_listComponent.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -215,7 +204,7 @@
       <workItem from="1584405053875" duration="48000" />
       <workItem from="1584405102876" duration="3000" />
       <workItem from="1584982988564" duration="130000" />
-      <workItem from="1584983126975" duration="6047000" />
+      <workItem from="1584983126975" duration="9770000" />
     </task>
     <servers />
   </component>
@@ -239,10 +228,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="163" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1584366927605" />
-    <state x="681" y="261" width="540" height="524" key="StructurePopup" timestamp="1584984252861">
+    <state x="681" y="261" width="540" height="524" key="StructurePopup" timestamp="1584991902729">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="681" y="261" width="540" height="524" key="StructurePopup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1584984252861" />
+    <state x="681" y="261" width="540" height="524" key="StructurePopup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1584991902729" />
     <state x="2648" y="397" key="com.intellij.ide.util.TipDialog" timestamp="1584983294220">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
@@ -252,9 +241,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="647" y="367" width="708" height="306" key="org.intellij.images.editor.actions.BackgroundImageDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1584366884632" />
-    <state x="623" y="243" width="672" height="674" key="search.everywhere.popup" timestamp="1584988812102">
+    <state x="623" y="243" width="672" height="674" key="search.everywhere.popup" timestamp="1584990445180">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="243" width="672" height="674" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1584988812102" />
+    <state x="623" y="243" width="672" height="674" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1584990445180" />
   </component>
 </project>

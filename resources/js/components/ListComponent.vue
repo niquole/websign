@@ -9,12 +9,12 @@
                     </div>
                     <div class="post-title">
                         <h2>
-                            {{post.title}}
+                            {{post.title}} {{post.id}}
                             <small>{{ post.description }}</small>
                         </h2>
                     </div>
-                    <div>
-                        <a href="#" class="btn">visit {{post.user.name}} </a>
+                    <div >
+                        <a href="#" class="visit_btn">visit {{post.user.name}} </a>
                     </div>
                 </div>
             </div>
@@ -39,6 +39,6 @@
 
 </script>
 
-<style lang="scss">
+<style lang="scss" >
 
 </style>
