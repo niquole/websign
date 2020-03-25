@@ -1932,6 +1932,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -37344,55 +37346,61 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    { staticClass: "container" },
-    _vm._l(_vm.posts, function(post) {
-      return _c("div", [
-        _c("div", { staticClass: "posts" }, [
-          _c("div", { staticClass: "post" }, [
-            _vm._m(0, true),
-            _vm._v(" "),
-            _c("div", { staticClass: "post-title" }, [
-              _c("h2", [
-                _vm._v(
-                  "\n                        " +
-                    _vm._s(post.title) +
-                    " " +
-                    _vm._s(post.id) +
-                    "\n                        "
-                ),
-                _c("small", [_vm._v(_vm._s(post.description))])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", [
-              _c("a", { staticClass: "visit_btn", attrs: { href: "#" } }, [
-                _vm._v("visit " + _vm._s(post.user.name) + " ")
+  return _c("div", [
+    _c(
+      "div",
+      { staticClass: "row row-cols-1 row-cols-md-4" },
+      _vm._l(_vm.posts, function(post) {
+        return _c("div", [
+          _c("div", { staticClass: "col mb-4 text-white" }, [
+            _c("div", { staticClass: "card text-center" }, [
+              _c("img", {
+                staticClass: "card-img-top",
+                attrs: {
+                  src: "https://source.unsplash.com/300x225/?cat",
+                  alt: "cat"
+                }
+              }),
+              _vm._v(" "),
+              _c("div", { staticClass: "card-body" }, [
+                _c("div", { staticClass: "card-title" }, [
+                  _c("h4", [
+                    _vm._v(
+                      "\n                                " +
+                        _vm._s(post.title) +
+                        " " +
+                        _vm._s(post.id) +
+                        "\n                            "
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "card-text" }, [
+                  _vm._v(
+                    "\n                            " +
+                      _vm._s(post.description) +
+                      "\n                        "
+                  )
+                ]),
+                _vm._v(" "),
+                _c(
+                  "a",
+                  {
+                    staticClass: "btn btn-outline-light card-link mt-3 ",
+                    attrs: { href: "#" }
+                  },
+                  [_vm._v("visit " + _vm._s(post.user.name) + " ")]
+                )
               ])
             ])
           ])
         ])
-      ])
-    }),
-    0
-  )
+      }),
+      0
+    )
+  ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "post_image-holder" }, [
-      _c("span", { staticClass: "like" }, [_vm._v("Like")]),
-      _vm._v(" "),
-      _c("img", {
-        staticClass: "post_image",
-        attrs: { src: "https://source.unsplash.com/300x225/?cat", alt: "cat" }
-      })
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 

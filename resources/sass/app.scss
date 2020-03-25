@@ -1,12 +1,17 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css?family=Baloo+Chettan+2&display=swap');
 
 // Variables
 @import 'variables';
-@import 'listComponent';
-@import "header";
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+//scss
+@import "general";
+@import 'listComponent';
+@import "header";
+
 
 

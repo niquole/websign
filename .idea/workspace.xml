@@ -3,14 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="bf22aa93-631e-462a-916e-9422204bcd9c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/PostFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/PostFactory.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/HeaderComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/HeaderComponent.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/components/ListComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/ListComponent.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/_header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/_header.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/sass/_listComponent.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/_listComponent.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,7 +169,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -204,7 +205,10 @@
       <workItem from="1584405053875" duration="48000" />
       <workItem from="1584405102876" duration="3000" />
       <workItem from="1584982988564" duration="130000" />
-      <workItem from="1584983126975" duration="9770000" />
+      <workItem from="1584983126975" duration="10038000" />
+      <workItem from="1585037473444" duration="4564000" />
+      <workItem from="1585128606454" duration="714000" />
+      <workItem from="1585159470167" duration="5025000" />
     </task>
     <servers />
   </component>
@@ -212,10 +216,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="781" y="276" key="FileChooserDialogImpl" timestamp="1584405098996">
+    <state x="781" y="276" key="FileChooserDialogImpl" timestamp="1585159945132">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="781" y="276" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1584405098996" />
+    <state x="781" y="276" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1585159945132" />
     <state x="0" y="0" key="FileDocumentManager.FileCacheConflict" timestamp="1584017025420">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -224,26 +228,26 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="791" y="335" key="NewPhpClassDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1583680464676" />
-    <state x="461" y="163" key="SettingsEditor" timestamp="1584366927605">
+    <state x="461" y="163" key="SettingsEditor" timestamp="1585159952200">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="461" y="163" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1584366927605" />
+    <state x="461" y="163" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1585159952200" />
     <state x="681" y="261" width="540" height="524" key="StructurePopup" timestamp="1584991902729">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="681" y="261" width="540" height="524" key="StructurePopup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1584991902729" />
-    <state x="2648" y="397" key="com.intellij.ide.util.TipDialog" timestamp="1584983294220">
+    <state x="2648" y="397" key="com.intellij.ide.util.TipDialog" timestamp="1585159471014">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2648" y="397" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1584982989779" />
+    <state x="2648" y="397" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1585159471014" />
     <state x="2648" y="397" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1584983294220" />
-    <state x="647" y="367" width="708" height="306" key="org.intellij.images.editor.actions.BackgroundImageDialog" timestamp="1584366884632">
+    <state x="647" y="367" width="708" height="306" key="org.intellij.images.editor.actions.BackgroundImageDialog" timestamp="1585159950676">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="647" y="367" width="708" height="306" key="org.intellij.images.editor.actions.BackgroundImageDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1584366884632" />
-    <state x="623" y="243" width="672" height="674" key="search.everywhere.popup" timestamp="1584990445180">
+    <state x="647" y="367" width="708" height="306" key="org.intellij.images.editor.actions.BackgroundImageDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1585159950676" />
+    <state x="623" y="243" width="672" height="674" key="search.everywhere.popup" timestamp="1585162882497">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="243" width="672" height="674" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1584990445180" />
+    <state x="623" y="243" width="672" height="674" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1585162882497" />
   </component>
 </project>

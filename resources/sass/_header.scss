@@ -1,27 +1,41 @@
 
-li.nav-item{
-position:relative;
-left:68%;
-margin-left:20px;
+li.nav-item {
+    position: relative;
+    //left: 68%;
+    //margin-left: 20px;
 }
 
-li.nav-item{
-font-family:"MS Gothic"!Important;
+li.nav-item {
+    font-family: 'Baloo Chettan 2', cursive;
+    font-size: 20px;
+    color: #0096a0 !important;
+
+
 }
 
-li.nav-item:hover{
-color:mediumpurple!important;
+li.nav-item:hover {
+    color: mediumpurple !important;
 }
 
-a.navbar-brand:hover{
-cursor:pointer;
-color:mediumpurple!important;
+a.navbar-brand:hover {
+    cursor: pointer !important;
+    color: mediumpurple !important;
 }
 
-a.navbar-brand{
-font-family:"MSGothic"!Important;
-font-weight:bolder;
-font-size:20px!important;
-/*position:relative;*/
-margin-left:44%;
+a.navbar-brand {
+        font-family: 'Baloo Chettan 2', cursive;
+    font-weight: bolder;
+    font-size: 25px;
+    //margin-left: 44%;
+    color: #0096a0 !important;
+
+}
+
+.bg-white {
+    background-color: black !important;
+}
+
+.navbar-light .navbar-nav .nav-link {
+        color: #0096a0 !important;
+
 }

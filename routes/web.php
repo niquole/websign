@@ -18,4 +18,8 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
-//Route::get('/posts', 'Posts@index')->name('posts');
+//Route::get('/mostLiked', 'MostLikedController@index')->name('most liked');
+//Route::get('/categories', 'Categories@index')->name('categories');
+//Route::get('/categories', 'Categories@index')->name('categories');
+
+

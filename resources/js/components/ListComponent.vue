@@ -1,20 +1,22 @@
 <template id="app">
-    <div class="container">
-        <div v-for="post in posts">
-            <div class="posts">
-                <div class="post">
-                    <div class="post_image-holder">
-                        <span class="like">Like</span>
-                        <img class="post_image" src="https://source.unsplash.com/300x225/?cat" alt="cat"/>
-                    </div>
-                    <div class="post-title">
-                        <h2>
-                            {{post.title}} {{post.id}}
-                            <small>{{ post.description }}</small>
-                        </h2>
-                    </div>
-                    <div >
-                        <a href="#" class="visit_btn">visit {{post.user.name}} </a>
+    <div>
+        <div class="row row-cols-1 row-cols-md-4">
+            <div v-for="post in posts">
+                <div class="col mb-4 text-white">
+                    <div class="card text-center">
+                        <img class="card-img-top" src="https://source.unsplash.com/300x225/?cat" alt="cat"/>
+                        <div class="card-body">
+                            <div class="card-title">
+                                <h4>
+                                    {{post.title}} {{post.id}}
+                                </h4>
+                            </div>
+                            <div class="card-text">
+                                {{ post.description }}
+                            </div>
+
+                            <a href="#" class="btn btn-outline-light card-link mt-3 ">visit {{post.user.name}} </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -39,6 +41,6 @@
 
 </script>
 
-<style lang="scss" >
+<style lang="scss">
 
 </style>
