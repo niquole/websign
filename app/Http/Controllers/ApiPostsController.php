@@ -7,7 +7,19 @@ use Illuminate\Http\Request;
 
 class ApiPostsController extends Controller
 {
-    public function index() {
-    	return Post::with('comments', 'tags', 'user')->get();
+    public function index()
+    {
+        $posts = Post::with('comments', 'tags', 'user')->orderBy('created_at', 'desc')->get();
+        foreach ($posts as $key => $post) {
+            $posts[$key]->description = \Str::Limit($post->description, 30);
+//            $posts[$key]->title = $post->title;
+
+        }
+
+        return $posts;
+    }
+    public function store(Request $request) {
+        $request->merge(["user_id"=> \Auth::user()->id]);
+        Post::create($request->all());
     }
 }

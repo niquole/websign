@@ -19,3 +19,9 @@ use Illuminate\Support\Facades\Route;
 //});
 
 Route::middleware('api')->get('posts', 'ApiPostsController@index');
+Route::middleware('api')->get('categories', 'ApiCategoriesController@index');
+Route::middleware('api')->post('/image/upload', 'ApiImageUpload@uploadImage');
+Route::middleware('auth:api')->post('/posts', 'ApiPostsController@store');
+
+
+

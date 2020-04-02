@@ -8,6 +8,9 @@ require('./bootstrap');
 
 window.Vue = require('vue');
 
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
+
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -15,6 +18,10 @@ window.Vue = require('vue');
  *
  * Eg. ./components/HeaderComponent.vue -> <example-component></example-component>
  */
+Vue.use(ElementUI);
+
+
+
 
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
@@ -22,7 +29,7 @@ window.Vue = require('vue');
 Vue.component('header-component', require('./components/HeaderComponent.vue').default);
 Vue.component('list-component', require('./components/ListComponent.vue').default);
 Vue.component('homepage-component', require('./components/HomePageComponent.vue').default);
-
+Vue.component('post-form-component', require('./components/subComponents/PostFormComponent.vue').default);
 
 
 /**

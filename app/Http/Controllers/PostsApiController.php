@@ -10,6 +10,7 @@ class PostsApiController extends Controller
     public function index()
     {
         $posts = Post::all();
+
         return $posts;
     }
 }

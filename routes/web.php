@@ -14,12 +14,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 // Route::get('/', 'HomeController');
+Route::resource('category', 'CategoryController');
 
 Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
-//Route::get('/mostLiked', 'MostLikedController@index')->name('most liked');
-//Route::get('/categories', 'Categories@index')->name('categories');
-//Route::get('/categories', 'Categories@index')->name('categories');
+Route::get('/home', 'HomeController@index')->name('home');
 
 
+
+// routes for likes
+Route::get('product/like/{id}', ['as' => 'product.like', 'uses' => 'LikeController@likeProduct']);
+Route::get('post/like/{id}', ['as' => 'post.like', 'uses' => 'LikeController@likePost']);
