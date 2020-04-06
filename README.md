@@ -1,6 +1,6 @@
 <img src="https://pbs.twimg.com/media/EU7s7PuXsAE7lWQ?format=png&name=medium" width="400">
 
-#####Websign is an online portfolio website for web design. Users can upload pictures of their projects with a title and a description and other users can like and comment.
+Websign is an online portfolio website for web design. Users can upload pictures of their projects with a title and a description and other users can like and comment.
 
 ## Getting Started
 
