@@ -99939,7 +99939,7 @@ var render = function() {
                     staticClass: "btn btn-outline-light card-link mt-3 ",
                     attrs: { href: "" }
                   },
-                  [_vm._v("visit " + _vm._s(post.user.name) + " ")]
+                  [_vm._v(" " + _vm._s(post.user.name) + " ")]
                 )
               ])
             ])

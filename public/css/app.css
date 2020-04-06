@@ -10924,19 +10924,6 @@ input.img-upload {
   opacity: 0;
 }
 
-.post-form button {
-  color: #fff;
-  margin-top: 20px;
-  background: #0096a0;
-  border: none;
-  width: 504px;
-  height: 35px;
-  border-radius: 4px;
-  border-bottom: 4px solid #117A60;
-  transition: all 0.2s ease;
-  outline: none;
-}
-
 .submitPost button:hover {
   background: #2da090;
   color: #005653;

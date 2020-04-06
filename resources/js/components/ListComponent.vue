@@ -15,7 +15,7 @@
                                 {{ post.description }}
                             </div>
 
-                            <a href="" class="btn btn-outline-light card-link mt-3 ">visit {{post.user.name}} </a>
+                            <a href="" class="btn btn-outline-light card-link mt-3 "> {{post.user.name}} </a>
                         </div>
                     </div>
                 </div>

@@ -13,15 +13,25 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', 'HomeController');
-Route::resource('category', 'CategoryController');
 
 Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
-Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/home', function () {
+    return view('home');
+});
 
 
+Route::get('posts/{post}', 'PostController@index');
+
+
+Route::get('/user', function () {
+    $user = request('user_id');
+    return view('user', [
+        'user_id' => $user
+    ]);
+});
 
 // routes for likes
 Route::get('product/like/{id}', ['as' => 'product.like', 'uses' => 'LikeController@likeProduct']);

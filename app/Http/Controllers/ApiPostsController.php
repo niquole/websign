@@ -12,7 +12,6 @@ class ApiPostsController extends Controller
         $posts = Post::with('comments', 'tags', 'user')->orderBy('created_at', 'desc')->get();
         foreach ($posts as $key => $post) {
             $posts[$key]->description = \Str::Limit($post->description, 30);
-//            $posts[$key]->title = $post->title;
 
         }
 
