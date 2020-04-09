@@ -13,13 +13,12 @@ class CreateLikesTable extends Migration
      */
     public function up()
     {
-        Schema::create('likables', function (Blueprint $table) {
-            $table->id();
-            $table->integer('user_id');
-            $table->integer('likeable_id');
-            $table->string('likeable_type');
-            $table->softDeletes();
-            $table->timestamps();
+        Schema::create('likes', function (Blueprint $table) {
+            $table->bigInteger('post_id')->unsigned();
+            $table->bigInteger('user_id')->unsigned();
+
+            $table->foreign('post_id')->references('id')->on('posts')->onDelete('cascade');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 

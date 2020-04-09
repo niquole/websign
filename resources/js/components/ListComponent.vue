@@ -1,20 +1,28 @@
 <template id="app">
     <div>
         <div class="row row-cols-1 row-cols-md-4">
-            <div v-for="post in posts">
+            <div v-for="(post, index) in posts">
                 <div class="col mb-4 text-white">
                     <div class="card text-center">
                         <img class="card-img-top" :src="post.image" alt="cat"/>
                         <div class="card-body">
-                            <div class="card-title">
+                            <a :href="'/post/' + post.id" class="card-title">
                                 <h4>
-                                    {{post.title}} {{post.id}}
+                                    {{post.title}}
                                 </h4>
-                            </div>
+                            </a>
                             <div class="card-text">
                                 {{ post.description }}
                             </div>
-
+                            <button @click="like(post.id, index)">
+                                <span v-if="post.if_i_liked">
+                                    Dislike
+                                </span>
+                                <span v-else>
+                                    Like
+                                </span>
+                            </button>
+                            {{post.likes_count}}
                             <a href="" class="btn btn-outline-light card-link mt-3 "> {{post.user.name}} </a>
                         </div>
                     </div>
@@ -27,9 +35,7 @@
 <script>
 
     export default {
-        components: {
-
-        },
+        components: {},
         data() {
             return {
                 posts: []
@@ -40,7 +46,14 @@
                 this.posts = response.data
             })
         },
-        methods: {}
+        methods: {
+            like(id, index) {
+                axios.post('/api/posts/like', {id: id}).then((response) => {
+                    this.posts[index].if_i_liked = (response.data.if_i_liked == '1') ? true : false;
+                    this.posts[index].likes_count = parseInt(response.data.likes_count);
+                })
+            }
+        }
     }
 
 </script>

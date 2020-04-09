@@ -23,7 +23,9 @@ Route::get('/home', function () {
 });
 
 
-Route::get('posts/{post}', 'PostController@index');
+//Route::get('posts/{post}', 'PostController@index');
+Route::get('/posts/{id}', 'PostsController@show')->name('posts');
+
 
 
 Route::get('/user', function () {
@@ -33,6 +35,4 @@ Route::get('/user', function () {
     ]);
 });
 
-// routes for likes
-Route::get('product/like/{id}', ['as' => 'product.like', 'uses' => 'LikeController@likeProduct']);
-Route::get('post/like/{id}', ['as' => 'post.like', 'uses' => 'LikeController@likePost']);
+//like routes

@@ -2,8 +2,8 @@
 
 namespace App;
 
-use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Passport\HasApiTokens;
 
@@ -49,8 +49,10 @@ class User extends Authenticatable
         return $this->hasMany(Comment::class);
     }
 
-    public function likedPosts()
+    public function likes()
     {
-        return $this->morphedByMany('App\Post', 'likeable')->whereDeletedAt(null);
+        return $this->belongsToMany(Post::class, 'likes', 'user_id', 'post_id');
     }
+
+
 }

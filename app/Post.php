@@ -2,17 +2,20 @@
 
 namespace App;
 
+
 use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
+    protected $appends = ['likes_count', 'if_i_liked'];
     protected $fillable = ['description', 'image', 'user_id', 'title', 'category', 'like'];
 
     public function user()
     {
         return $this->belongsTo(User::class);
     }
-        public function category()
+
+    public function category()
     {
         return $this->HasMany(Category::class);
     }
@@ -26,14 +29,24 @@ class Post extends Model
     {
         return $this->hasMany(Comment::class);
     }
-     public function likes()
+
+    public function likes()
     {
-        return $this->morphToMany('App\User', 'likeable')->whereDeletedAt(null);
+        return $this->belongsToMany(User::class, 'likes', 'post_id', 'user_id');
     }
 
-    public function like()
+    public function getLikesCountAttribute()
     {
-        $like = $this->likes()->whereUserId(Auth::id())->first();
-        return (!is_null($like)) ? true : false;
+        return $this->likes()->count();
+    }
+
+    public function getIfILikedAttribute()
+    {
+        $user = \Auth::user() ?? \Auth::guard("api")->user();
+
+        if($user) {
+            return ($this->likes()->where('user_id', $user->id)->exists()) ?? true;
+        }
+        return false;
     }
 }

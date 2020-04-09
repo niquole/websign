@@ -3562,6 +3562,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {},
   data: function data() {
@@ -3576,7 +3584,18 @@ __webpack_require__.r(__webpack_exports__);
       _this.posts = response.data;
     });
   },
-  methods: {}
+  methods: {
+    like: function like(id, index) {
+      var _this2 = this;
+
+      axios.post('/api/posts/like', {
+        id: id
+      }).then(function (response) {
+        _this2.posts[index].if_i_liked = response.data.if_i_liked == '1' ? true : false;
+        _this2.posts[index].likes_count = parseInt(response.data.likes_count);
+      });
+    }
+  }
 });
 
 /***/ }),
@@ -99903,7 +99922,7 @@ var render = function() {
     _c(
       "div",
       { staticClass: "row row-cols-1 row-cols-md-4" },
-      _vm._l(_vm.posts, function(post) {
+      _vm._l(_vm.posts, function(post, index) {
         return _c("div", [
           _c("div", { staticClass: "col mb-4 text-white" }, [
             _c("div", { staticClass: "card text-center" }, [
@@ -99913,17 +99932,22 @@ var render = function() {
               }),
               _vm._v(" "),
               _c("div", { staticClass: "card-body" }, [
-                _c("div", { staticClass: "card-title" }, [
-                  _c("h4", [
-                    _vm._v(
-                      "\n                                " +
-                        _vm._s(post.title) +
-                        " " +
-                        _vm._s(post.id) +
-                        "\n                            "
-                    )
-                  ])
-                ]),
+                _c(
+                  "a",
+                  {
+                    staticClass: "card-title",
+                    attrs: { href: "/post/" + post.id }
+                  },
+                  [
+                    _c("h4", [
+                      _vm._v(
+                        "\n                                " +
+                          _vm._s(post.title) +
+                          "\n                            "
+                      )
+                    ])
+                  ]
+                ),
                 _vm._v(" "),
                 _c("div", { staticClass: "card-text" }, [
                   _vm._v(
@@ -99933,6 +99957,34 @@ var render = function() {
                   )
                 ]),
                 _vm._v(" "),
+                _c(
+                  "button",
+                  {
+                    on: {
+                      click: function($event) {
+                        return _vm.like(post.id, index)
+                      }
+                    }
+                  },
+                  [
+                    post.if_i_liked
+                      ? _c("span", [
+                          _vm._v(
+                            "\n                                Dislike\n                            "
+                          )
+                        ])
+                      : _c("span", [
+                          _vm._v(
+                            "\n                                Like\n                            "
+                          )
+                        ])
+                  ]
+                ),
+                _vm._v(
+                  "\n                        " +
+                    _vm._s(post.likes_count) +
+                    "\n                        "
+                ),
                 _c(
                   "a",
                   {

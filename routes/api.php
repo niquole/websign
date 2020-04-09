@@ -23,5 +23,8 @@ Route::middleware('api')->get('categories', 'ApiCategoriesController@index');
 Route::middleware('api')->post('/image/upload', 'ApiImageUpload@uploadImage');
 Route::middleware('auth:api')->post('/posts', 'ApiPostsController@store');
 
+Route::middleware('auth:api')->post('/posts/like', 'ApiPostsController@like');
+
+
 
 
