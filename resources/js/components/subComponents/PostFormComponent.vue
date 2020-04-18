@@ -5,8 +5,8 @@
                 <div class="card">
                     <div class="card-body">
                         <form enctype="multipart/form-data" class="post-form">
-                            <input class="form-control mb-1" placeholder="title" type="text" v-model="form.title">
-                            <input class="form-control mb-1" placeholder="description" type="text"
+                            <input class="form-control mb-2" placeholder="title" type="text" v-model="form.title">
+                            <input class="form-control mb-2" placeholder="description" type="text"
                                    v-model="form.description">
                             <el-upload
                                 class="upload-demo"
@@ -21,11 +21,11 @@
                                     </div>
                                 </div>
                             </el-upload>
-                            <select class="form-control mt-1" name="categories" id="categories"
+                            <select class="form-control mt-3" name="categories" id="categories"
                                     v-model="form.category_id">
                                 <option v-for="category in categories" :value="category.id">{{ category.name }}</option>
                             </select>
-                            <button @click="submitForm" type="button" class="submitPost">Post</button>
+                            <button @click="submitForm" type="button" class="submitPost btn btn-outline-light form-control mt-3" >Post</button>
                         </form>
                     </div>
                 </div>

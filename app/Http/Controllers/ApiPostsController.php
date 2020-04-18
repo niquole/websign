@@ -32,11 +32,21 @@ class ApiPostsController extends Controller
         if ($post->likes()->where('user_id', \Auth::user()->id)->exists()) {
             $post->likes()->detach(\Auth::user()->id);
         } else {
-            $post->likes()->sync(\Auth::user()->id);
+            $post->likes()->attach(\Auth::user()->id);
         }
         return [
             'likes_count' => $post->likes_count,
             'if_i_liked' => $post->if_i_liked
         ];
+    }
+
+    public function latest()
+    {
+         $posts = Post::with('comments', 'tags', 'user')->orderBy('created_at', 'desc')->limit(4)->get();
+          foreach ($posts as $key => $post) {
+            $posts[$key]->description = \Str::Limit($post->description, 30);
+
+        }
+         return $posts;
     }
 }

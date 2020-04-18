@@ -5,6 +5,28 @@ body {
 
 .card {
     background-color: black;
-    border: 1px solid #0096a0;
-    height: 402px;
+    border: 2px solid #0096a0;
+}
+
+a {
+    color: #0096a0;
+}
+
+img.card-img-top {
+    max-height: 200px !important;
+    object-fit: cover;
+}
+
+.category-card {
+    height: 100px !important;
+    //width: 280px !important;
+    border-radius: 0.25rem;
+    //margin-left: 30px;
+    background-color: black;
+    border: 2px solid #0096a0;
+}
+
+.card-footer {
+    margin-top: 60px !important;
+    border-top: 2px solid #0096a0;
 }

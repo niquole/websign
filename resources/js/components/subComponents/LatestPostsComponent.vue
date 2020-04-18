@@ -1,12 +1,13 @@
-<template id="app">
+<template>
     <div>
+        <h1>Latest posts</h1>
         <div class="row row-cols-1 row-cols-md-4">
             <div v-for="(post, index) in posts">
                 <div class="col mb-4 text-white">
                     <div class="card text-center">
                         <img class="card-img-top" :src="post.image" alt="cat"/>
                         <div class="card-body">
-                            <a :href="'/post/' + post.id" class="card-title">
+                            <a :href="'/posts/' + post.id" class="card-title">
                                 <h4>
                                     {{post.title}}
                                 </h4>
@@ -33,11 +34,12 @@
                 </div>
             </div>
         </div>
+        <a href="/posts"><button class="btn btn-outline-light float-right "> All posts</button></a>
     </div>
 </template>
 
-<script>
 
+<script>
     export default {
         components: {},
         data() {
@@ -46,9 +48,9 @@
             }
         },
         mounted() {
-            axios.get('/api/posts').then((response) => {
-                this.posts = response.data
-            })
+                axios.get('/api/posts/latest').then((response) => {
+                    this.posts = response.data
+                })
         },
         methods: {
             like(id, index) {
@@ -59,9 +61,4 @@
             }
         }
     }
-
 </script>
-
-<style lang="scss">
-
-</style>

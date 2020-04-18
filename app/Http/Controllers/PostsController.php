@@ -10,18 +10,21 @@ class PostsController extends Controller
     public function index()
     {
 
-        return view('posts');
+        return view('allposts');
     }
 
     public function show($id)
     {
 
-        $post = Post::where('id', $id)->with(['user', 'category', 'title', 'description' => function ($query) {
+//        $post = Post::where('id', $id)->with(['user', 'title', 'description' => function ($query) {
+//            $query->with(['user'])->orderBy('created_at', 'desc');
+//        }])->orderBy('created_at', 'desc')->first();
+
+        $post = Post::where('id', $id)->with(['user', 'comments' => function ($query) {
             $query->with(['user'])->orderBy('created_at', 'desc');
         }])->orderBy('created_at', 'desc')->first();
 
-
-        return view("post", compact("post"));
-    }
+            return view("post", compact("post"));
+        }
 
 }

@@ -1,11 +1,16 @@
 
 .card .post-form {
     width: 500px;
-    height: 600px;
 }
-div.card-body {
-    height: 600px;
+
+.card {
+    height: 450px!important;
 }
+
+//div.card-body {
+//    height: 500px;
+//}
+
 .post-form p {
     width: 100%;
     height: 100%;
@@ -14,10 +19,12 @@ div.card-body {
     color: #ffffff;
     font-family: Arial;
 }
+
 .img-upload-border {
-        border: 4px dashed #fff;
+    border: 4px dashed #fff;
 
 }
+
 input.img-upload {
     position: absolute;
     //margin: 10px;
@@ -34,13 +41,25 @@ input.img-upload {
     color: #005653;
     cursor: pointer;
 }
+
 .img-upload:hover {
     cursor: pointer;
 }
+
 .post-form button:active {
     border: 0;
 
 }
 
 
+.submitPost {
+    border-color: #005653;
+}
 
+.submitPost:hover {
+    color: #005653;
+}
+
+.el-upload-dragger {
+    width: 500px!important;
+}

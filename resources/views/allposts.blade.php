@@ -6,10 +6,8 @@
             @auth
                 <post-form-component></post-form-component>
             @endauth
-            <latest-posts-component></latest-posts-component>
-            <homepage-categories-component></homepage-categories-component>
+            <list-component></list-component>
             <footer-component></footer-component>
-
         </div>
     </div>
 

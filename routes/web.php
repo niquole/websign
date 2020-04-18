@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
+Route::get('/posts', 'PostsController@index')->name('posts');
 
 Route::get('/home', function () {
     return view('home');
@@ -25,6 +26,7 @@ Route::get('/home', function () {
 
 //Route::get('posts/{post}', 'PostController@index');
 Route::get('/posts/{id}', 'PostsController@show')->name('posts');
+;
 
 
 

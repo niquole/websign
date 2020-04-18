@@ -10889,17 +10889,37 @@ body {
 
 .card {
   background-color: black;
-  border: 1px solid #0096a0;
-  height: 402px;
+  border: 2px solid #0096a0;
+}
+
+a {
+  color: #0096a0;
+}
+
+img.card-img-top {
+  max-height: 200px !important;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.category-card {
+  height: 100px !important;
+  border-radius: 0.25rem;
+  background-color: black;
+  border: 2px solid #0096a0;
+}
+
+.card-footer {
+  margin-top: 60px !important;
+  border-top: 2px solid #0096a0;
 }
 
 .card .post-form {
   width: 500px;
-  height: 600px;
 }
 
-div.card-body {
-  height: 600px;
+.card {
+  height: 450px !important;
 }
 
 .post-form p {
@@ -10936,6 +10956,18 @@ input.img-upload {
 
 .post-form button:active {
   border: 0;
+}
+
+.submitPost {
+  border-color: #005653;
+}
+
+.submitPost:hover {
+  color: #005653;
+}
+
+.el-upload-dragger {
+  width: 500px !important;
 }
 
 li.nav-item {
