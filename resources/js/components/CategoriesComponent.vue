@@ -16,9 +16,6 @@
             </div>
 
         </div>
-        <a href="/categories">
-            <button class="btn btn-outline-light  float-right ">All categories</button>
-        </a>
     </div>
 </template>
 
@@ -32,7 +29,7 @@
             }
         },
         mounted() {
-            axios.get('/api/categories/featured').then((response) => {
+            axios.get('/api/categories').then((response) => {
                 this.categories = response.data
             })
         },

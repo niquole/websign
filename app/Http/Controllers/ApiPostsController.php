@@ -11,7 +11,7 @@ class ApiPostsController extends Controller
 
     public function index()
     {
-        $posts = Post::with('comments', 'tags', 'user')->orderBy('created_at', 'desc')->get();
+        $posts = Post::with('comments', 'user', 'category')->orderBy('created_at', 'desc')->get();
         foreach ($posts as $key => $post) {
             $posts[$key]->description = \Str::Limit($post->description, 30);
 
@@ -42,7 +42,7 @@ class ApiPostsController extends Controller
 
     public function latest()
     {
-         $posts = Post::with('comments', 'tags', 'user')->orderBy('created_at', 'desc')->limit(4)->get();
+         $posts = Post::with('comments', 'user', 'category')->orderBy('created_at', 'desc')->limit(4)->get();
           foreach ($posts as $key => $post) {
             $posts[$key]->description = \Str::Limit($post->description, 30);
 

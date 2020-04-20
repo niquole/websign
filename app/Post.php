@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Post extends Model
 {
     protected $appends = ['likes_count', 'if_i_liked'];
-    protected $fillable = ['description', 'image', 'user_id', 'title', 'like'];
+    protected $fillable = ['description', 'image', 'user_id', 'title', 'like', 'category_id'];
 
     public function user()
     {
@@ -17,12 +17,7 @@ class Post extends Model
 
     public function category()
     {
-        return  $this->belongsTo(Category::class);
-    }
-
-    public function tags()
-    {
-        return $this->belongsToMany(Tag::class);
+        return $this->belongsTo(Category::class);
     }
 
     public function comments()

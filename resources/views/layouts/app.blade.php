@@ -7,9 +7,8 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
 
-{{--    <!-- Scripts -->--}}
+    {{--    <!-- Scripts -->--}}
 
     <script src="{{ asset('js/app.js') }}" defer></script>
 
@@ -20,13 +19,19 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
 <div id="app">
     <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
         <div class="container">
             <a class="navbar-brand" href="/">
-                {{ config('app.name', 'Laravel') }}
+                <h1>
+  <span
+      class="txt-rotate"
+      data-period="10"
+      data-rotate='[ "web design", "< web > < / sign >"]'></span>
+                </h1>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -84,3 +89,63 @@
 </div>
 </body>
 </html>
+<script !src="">
+    var TxtRotate = function (el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 10;
+        this.txt = '';
+        this.tick();
+        this.isDeleting = false;
+    };
+
+    TxtRotate.prototype.tick = function () {
+        var i = this.loopNum % this.toRotate.length;
+        var fullTxt = this.toRotate[i];
+
+        if (this.isDeleting) {
+            this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+            this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+
+        this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
+
+        var that = this;
+        var delta = 300 - Math.random() * 100;
+
+        if (this.isDeleting) {
+            delta /= 2;
+        }
+
+        if (!this.isDeleting && this.txt === fullTxt) {
+            delta = this.period;
+            this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === '') {
+            this.isDeleting = false;
+            this.loopNum++;
+            delta = 500;
+        }
+
+        setTimeout(function () {
+            that.tick();
+        }, delta);
+    };
+
+    window.onload = function () {
+        var elements = document.getElementsByClassName('txt-rotate');
+        for (var i = 0; i < elements.length; i++) {
+            var toRotate = elements[i].getAttribute('data-rotate');
+            var period = elements[i].getAttribute('data-period');
+            if (toRotate) {
+                new TxtRotate(elements[i], JSON.parse(toRotate), period);
+            }
+        }
+        // INJECT CSS
+        var css = document.createElement("style");
+        css.type = "text/css";
+        css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
+        document.body.appendChild(css);
+    };
+</script>

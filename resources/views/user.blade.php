@@ -3,7 +3,8 @@
 @section('content')
 
     <div id="app">
-        <user-component></user-component>
+        <user-component data-user="{{json_encode($user)}}"></user-component>
         <footer-component></footer-component>
-
     </div>
+@endsection
+

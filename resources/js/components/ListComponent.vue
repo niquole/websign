@@ -14,20 +14,22 @@
                             <div class="card-text">
                                 {{ post.description }}
                             </div>
-                            <button @click="like(post.id, index)" class="btn btn-outline-light mt-3 ">
-                                <span v-if="post.if_i_liked">
-                                    Dislike
+                            <div @click="like(post.id, index)" class="btn btn-outline-light mt-1 like-btn">
+                                <span v-if="post.if_i_liked" class="material-icons">
+                                    favorite
                                 </span>
-                                <span v-else>
-                                    Like
+                                <span v-else class="material-icons">
+                                    favorite_border
                                 </span>
-                            </button>
-                            <div class="mt-3 mb-3">
+                            </div>
+                            <div class="">
                                 likes:
                                 {{post.likes_count}}
                             </div>
                             by:
                             <a href="" class="card-link mt-3 "> {{post.user.name}} </a>
+
+                            <a :href="'/categories/' + post.category_id" class="card-link mt-3">{{ post.category.name }} </a>
                         </div>
                     </div>
                 </div>

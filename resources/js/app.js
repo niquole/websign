@@ -22,9 +22,6 @@ import 'element-ui/lib/theme-chalk/index.css';
 Vue.use(ElementUI);
 
 
-// const files = require.context('./', true, /\.vue$/i)
-// files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
-
 Vue.component('header-component', require('./components/HeaderComponent.vue').default);
 Vue.component('footer-component', require('./components/subComponents/FooterComponent').default);
 Vue.component('list-component', require('./components/ListComponent.vue').default);
@@ -33,6 +30,14 @@ Vue.component('post-form-component', require('./components/subComponents/PostFor
 Vue.component('latest-posts-component', require('./components/subComponents/LatestPostsComponent.vue').default);
 Vue.component('post-component', require('./components/PostComponent.vue').default);
 Vue.component('homepage-categories-component', require('./components/subComponents/HomePageCategories').default);
+Vue.component('post-comments', require('./components/subComponents/PostCommentsComponent').default);
+Vue.component('categories-component', require('./components/CategoriesComponent').default);
+Vue.component('category-component', require('./components/CategoryComponent').default);
+Vue.component('user-component', require('./components/UserComponent').default);
+
+
+
+
 
 
 /**

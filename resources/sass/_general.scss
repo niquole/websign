@@ -1,15 +1,21 @@
 body {
-    background-color: black;
-    color: white;
+    background-color: #141414;
+    color: #F5F1EC;
 }
 
 .card {
-    background-color: black;
-    border: 2px solid #0096a0;
+    margin-top: 50px;
+    background-color: #8D7476;
+    //border: 2px solid #fff;
 }
 
 a {
-    color: #0096a0;
+    color: #552F3B;
+    transition: .3s;
+}
+
+a:hover {
+    color: #7C3B4F !important;
 }
 
 img.card-img-top {
@@ -18,15 +24,40 @@ img.card-img-top {
 }
 
 .category-card {
+    margin-top: 50px;
     height: 100px !important;
-    //width: 280px !important;
-    border-radius: 0.25rem;
-    //margin-left: 30px;
-    background-color: black;
-    border: 2px solid #0096a0;
+    color: #F5F1EC !important;
+    border-radius: 0.35rem;
+    background-color: #141414;
+    border: 2px solid #7C3B4F;
+
+    h2 {
+        color: #F5F1EC !important;
+        margin-top: 10px;
+
+    }
 }
 
 .card-footer {
     margin-top: 60px !important;
-    border-top: 2px solid #0096a0;
+    border-top: 2px solid #F5F1EC;
 }
+
+.btn-link {
+    color: #7C3B4F;
+}
+
+span.material-icons {
+    color: #7C3B4F;
+    margin: 5px;
+}
+
+
+.like-btn {
+    margin:0;
+    padding: 0;
+    border-radius: 100%;
+    width: 35px;
+    height: 35px !important;
+}
+

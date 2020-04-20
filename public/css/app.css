@@ -10883,17 +10883,22 @@ a.text-dark:focus {
 }
 
 body {
-  background-color: black;
-  color: white;
+  background-color: #141414;
+  color: #F5F1EC;
 }
 
 .card {
-  background-color: black;
-  border: 2px solid #0096a0;
+  margin-top: 50px;
+  background-color: #8D7476;
 }
 
 a {
-  color: #0096a0;
+  color: #552F3B;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: #7C3B4F !important;
 }
 
 img.card-img-top {
@@ -10903,15 +10908,39 @@ img.card-img-top {
 }
 
 .category-card {
+  margin-top: 50px;
   height: 100px !important;
-  border-radius: 0.25rem;
-  background-color: black;
-  border: 2px solid #0096a0;
+  color: #F5F1EC !important;
+  border-radius: 0.35rem;
+  background-color: #141414;
+  border: 2px solid #7C3B4F;
+}
+
+.category-card h2 {
+  color: #F5F1EC !important;
+  margin-top: 10px;
 }
 
 .card-footer {
   margin-top: 60px !important;
-  border-top: 2px solid #0096a0;
+  border-top: 2px solid #F5F1EC;
+}
+
+.btn-link {
+  color: #7C3B4F;
+}
+
+span.material-icons {
+  color: #7C3B4F;
+  margin: 5px;
+}
+
+.like-btn {
+  margin: 0;
+  padding: 0;
+  border-radius: 100%;
+  width: 35px;
+  height: 35px !important;
 }
 
 .card .post-form {
@@ -10945,8 +10974,7 @@ input.img-upload {
 }
 
 .submitPost button:hover {
-  background: #2da090;
-  color: #005653;
+  background: #7C3B4F;
   cursor: pointer;
 }
 
@@ -10959,7 +10987,7 @@ input.img-upload {
 }
 
 .submitPost {
-  border-color: #005653;
+  border-color: #7C3B4F;
 }
 
 .submitPost:hover {
@@ -10977,23 +11005,23 @@ li.nav-item {
 li.nav-item {
   font-family: "Baloo Chettan 2", cursive;
   font-size: 20px;
-  color: #0096a0 !important;
+  color: #8D7476 !important;
 }
 
 li.nav-item:hover {
-  color: mediumpurple !important;
+  color: #7C3B4F !important;
 }
 
 a.navbar-brand:hover {
   cursor: pointer !important;
-  color: mediumpurple !important;
+  color: #7C3B4F !important;
 }
 
 a.navbar-brand {
   font-family: "Baloo Chettan 2", cursive;
   font-weight: bolder;
   font-size: 25px;
-  color: #0096a0 !important;
+  color: #8D7476 !important;
 }
 
 .bg-white {
@@ -11001,6 +11029,6 @@ a.navbar-brand {
 }
 
 .navbar-light .navbar-nav .nav-link {
-  color: #0096a0 !important;
+  color: #8D7476 !important;
 }
 

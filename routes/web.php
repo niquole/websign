@@ -18,10 +18,20 @@ Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/posts', 'PostsController@index')->name('posts');
+Route::get('/categories/{name}', 'CategoriesController@show')->name('categories');
+Route::get('/users/{id}', 'UsersController@show')->name('categories');
+
+
+
 
 Route::get('/home', function () {
     return view('home');
 });
+
+Route::get('/categories', function () {
+    return view('categories');
+});
+
 
 
 //Route::get('posts/{post}', 'PostController@index');
@@ -37,4 +47,3 @@ Route::get('/user', function () {
     ]);
 });
 
-//like routes

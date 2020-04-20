@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1> {{ user.name }}</h1>
+        <h1>{{category.name }}</h1>
         <div v-for="post in posts">
             <div class="col mb-4 text-white">
                 <div class="card text-center">
@@ -14,33 +14,49 @@
                         <div class="card-text">
                             {{ post.description }}
                         </div>
+
+                        <a href="" class="btn btn-outline card-link mt-3 "> {{post.user.name}} </a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </template>
+
 <script>
     export default {
-        props: ["dataUser"],
+        props: ['dataCategory'],
+        components: {},
         data() {
             return {
-                user: {
-                    name: ""
+                category: {
+                    title: ""
                 },
                 posts: [
                     {
                         id: "",
                         title: "",
                         description: "",
+                        user: {
+                            id: "",
+                            name: ""
+                        }
                     }
                 ]
+
             }
         },
         mounted() {
-            this.user = JSON.parse(this.dataUser);
-            this.posts = this.user.posts;
+            this.category = JSON.parse(this.dataCategory);
+            this.posts = this.category.posts
         },
-        methods: {}
+        methods: {
+            like(id, index) {
+                axios.post('/api/posts/like', {id: id}).then((response) => {
+                    this.posts[index].if_i_liked = (response.data.if_i_liked == '1') ? true : false;
+                    this.posts[index].likes_count = parseInt(response.data.likes_count);
+                })
+            }
+        }
     }
 </script>
